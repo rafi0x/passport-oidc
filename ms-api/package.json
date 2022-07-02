@@ -1,0 +1,30 @@
+{
+    "name": "multitenet",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "connect-mongo": "^4.6.0",
+        "connect-mongodb-session": "^3.1.1",
+        "cookie-parser": "^1.4.6",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.0.1",
+        "ejs": "^3.1.8",
+        "express": "^4.17.3",
+        "express-session": "^1.17.3",
+        "mongoose": "^6.2.3",
+        "openid-client": "^5.1.7",
+        "passport": "^0.6.0",
+        "passport-jwt": "^4.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.18"
+    }
+}
