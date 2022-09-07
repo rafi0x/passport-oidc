@@ -6,27 +6,15 @@ import passport from "../config/auth.config.js";
 const router = Router();
 
 
-router.get("/", passport.authenticate("openidconnect"));
+router.get("/login", passport.authenticate("openidconnect"));
 
 router.get(
     "/auth/callback",
-    passport.authenticate("openidconnect", {
-        successReturnToOrRedirect: "/",
-        failureRedirect: "/auth/login",
-    })
+    getToken
 );
 
-router.get("/logout", function (req, res, next) {
-    req.logout(
-       function (err) {
-           if (err) {
-               return next(err);
-           }
-           res.redirect("/");
-       }
-    )
-});
-
-router.get("/", getToken)
+router.get("/", (req, res) => {
+    res.send(`goto /login`);
+})
 
 export default router;
